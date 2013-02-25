@@ -1,0 +1,28 @@
+SKETCHUP NOTES
+
+Download STL exporter plugin:
+http://brettbeauregard.com/blog/2011/06/sketchup-to-stl-plugin-with-no-dialogs
+
+To install a plugin:
+1. Download (written in Ruby, fyi)
+2. Find plugins folder: Window > Ruby Console
+3. Type in: Sketchup.find_support_file("plugins")
+
+There it is!  Just drag the plugin there and you're set!
+http://sketchuptips.blogspot.com/2008/03/how-to-download-and-install-plugins.html
+
+- - -
+
+CHECK and FIX EXPORTED STL FILES
+Download:
+Netfabb software
+
+Instructions:
+http://www.3dcreationlab.co.uk/3d_prints_blog.php?id=27
+
+- - -
+
+OTHER RESOURCES/TOOLS
+
+RhinoCAD, Grasshopper
+OpenSCAD (programmy)

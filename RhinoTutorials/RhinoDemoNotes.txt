@@ -1,0 +1,101 @@
+RHINO DEMOS
+
+[ lecture on terms for 3d CAD ]
+01	CAD (computer aided drafting)
+02	x,y,z axis
+03	curves, surfaces, solids, meshes
+
+[ box with arced corner and circle inside ]
+01	New File (close existing if opens)
+02	Basic setup (units, viewports, zoom and pan)
+03	Ortho on
+04	Draw a rectangle using polyline and grid
+05	osnap settings
+06	Snap to both midpoints, draw circle in the center of rect
+07	Selecting objects, delete both
+08	Draw same rectangle by typing values / rect (horiz then vert)
+09	Construction lines (create new layer, change to it, draw lines in corner for arcs)
+10	Draw arcs (choose start/end/radius version)
+11	Trim tool
+12	Join arc and lines into single curve
+12	Using same const line, draw a circle at the ctr of arc
+13	Draw vertical construction lines (up 5" and down 1") starting in Top view, switching to front/right
+14	Extrude outer curves to solid base (down)
+15	Change view to Ghosted
+16	Notice the color is that of the layer
+17	Make new layers (Solids), change obj layers (mention you could delete solid)
+18	Choose all curves, extrude up (should have hole at circle)
+
+[ figure-8 ]
+01	Draw circle 10" diameter
+02	Draw another inside at 6" dia
+03	Select both, Transform > Copy (place so they intersect)
+04	Use trim to make into figure-8
+05	Select curves, Solid > Extrude Planar Curve > Straight
+06	Change to Solids layer
+07	Using osnap to get the same height as other object
+
+[ rounding solid edges ]
+01	Solid > Fillet Edge
+02	Change radius to .25"
+03	Select outer edges on rect to round
+04	Repeat with radius of 1" on inner cylinder
+
+[ chamfering edges ]
+01	Solid > Fillet Edge > Chamfer
+02	Set radius to .5"
+03	Select all edges of figure-8
+
+[ making a cup ]
+01	Draw on top view (intentionally the wrong one)
+02	Make side profile of cup using single polyline (straight side)
+03	Turn on control pts, shift top edge so side is at angle
+04	Select shape, Transform > Rotate
+05	Select bottom corner of base
+06	Select 2nd pt in right view (so we can rotate that dir)
+07	Rotate 90º using grid!
+09	Select cup side
+10	Extrude using Surface, Revolve
+11	Start at bottom ctr, end up Z, 360º angle
+12	To fillet corners, click Surface > Fillet Surfaces...
+13	Type in .25" for radius
+14	Select one face (side) then 2nd (bottom)
+15	Repeat for all edges (incl inside)
+
+[ octagon with holes ]
+01	Polygon tool (choose # holes = 8)
+02	Center point with edge on grid line
+03	Draw small circle near edge
+04	Transform > Array > Polar...
+05	Center is ctr of octo
+06	# of items is 7 (we already have 1!)
+07	First ref is ctr of circle
+08	Second is the last pt you want an item (can be corner of octo)
+09	Const line up and down
+10	Extrude!
+
+[ rendering basics ]
+01	switch to Render view in Perspective viewport
+02	render preview
+03	render (note colors)
+04	Render > Render Properties > Background Color...
+05	Note how this appears in Render view but not others
+06	Also note no cast shadow
+07	Add "floor" plane with surface
+08	Select object, Change object texture (Edit > Show Obj Properties or cmd+J)
+09	Material, change to Object
+10	Change gloss and reflection > Render Preview (reflects other objects!)
+11	Change texture to a file, then render preview to see reflection AND texture
+12	Change bump texture (note: may crash Rhino on older machines)
+13	Turn texture and reflectivity off, add bump
+14	Render to see finished version
+15	Add a directional light inside cup
+16	New layer for Lights, change color to white
+17	Place directional light inside (not at bottom) and Render
+18	Note the darkness - we overrode the main light
+19	Add a large spotlight (ctr, width, start) then Render
+
+[ export for 3d printing ]
+01	Export as STL file
+02	NetFabb
+03	ReplicatorG
